@@ -3,10 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import CanvasDrawing from './components/canvas';
+import MobxNoteApp from './MobxNoteApp';
+import { NotesProvider } from './mobx-store/notesContext';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+{/*     <App /> */}
+{/* <CanvasDrawing /> */}
+  <NotesProvider>
+    <MobxNoteApp />
+  </NotesProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

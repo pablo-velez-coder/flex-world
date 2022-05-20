@@ -1,0 +1,44 @@
+.collapse{
+    margin-bottom: 1.3rem;
+    @media (max-width:576px){
+       margin-bottom: 0.8rem;
+    }
+    &Checkbox{
+
+        :global(.ant-checkbox-checked .ant-checkbox-inner) {
+            background-color:purple;
+            border-color: black;border-radius: 4.5px;
+        }
+        :global(.ant-checkbox-inner ) {
+            background-color:white;
+            border-color: black;border-radius: 4.5px;
+        }
+    }
+    &Title{
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 1.4rem;
+        padding:0.1rem 0.6rem;
+        background-color: transparent;
+        cursor: pointer;
+        font-weight: bold;
+        &Text{
+            display:flex;
+            align-items: center;
+             font-weight:300;
+             font-size:1.1rem;
+             @media (max-width:576px){
+                font-size:0.9rem;
+             }
+        }
+    }
+    &Subs{
+        overflow:hidden;
+        transition: height 0.23s ease-in-out;
+    }
+
+}
+.activeText{
+    margin-left: 5px;
+}

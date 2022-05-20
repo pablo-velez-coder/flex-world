@@ -1,0 +1,244 @@
+.app{
+    background-color: gray;
+    width: 100%;
+
+    display:flex;
+    height:100vh;
+    @media (max-width:576px){
+        flex-direction: column;
+    }
+  &__left{
+      flex:0.3;
+      min-width: 300px;
+      display:flex;
+      flex-direction: column;
+      &__top{
+          flex:1;
+      }
+      &__bottom{
+          margin-top: 2rem;
+          >a{
+              margin-left: 1rem;
+              color:#242d50;
+              text-decoration: underline;
+          }
+          &__icon{
+              margin-left: 0.7rem;
+          }
+      }
+      @media (min-width:576px){
+        overflow: auto;
+        &::-webkit-scrollbar{
+            width:10px;
+          }
+          &::-webkit-scrollbar-track {
+            background-color: rgba(255, 166, 0, 0.623);
+          }
+          &::-webkit-scrollbar-thumb {
+            box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+            background-color: rgb(255, 132, 0);
+            border-radius: 50px;
+          }
+      }
+    >h1{
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 2.3rem;
+        color:#242d50;
+        @media (max-width:576px){
+            margin-bottom: 0;
+        }
+    }
+    >h2{
+        margin-top: 2.5rem;
+        font-size: 1.4rem;
+        font-weight: bold;
+        margin-bottom: 2rem;
+        @media (max-width:576px){
+            margin:0;
+            font-size: 1rem;
+            margin-bottom: 0.4rem;
+        }
+    }
+      >p{
+          font-weight: bold;
+          font-size: 1.1rem;
+      }
+      &__gapInput{
+          width: 40px;
+          margin-left: 1rem;
+          border-radius: 4px;
+      }
+    &__actions{
+   
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        margin-bottom: 2rem;
+        @media (max-width:576px){
+            margin-bottom: 1rem;
+        }
+    }
+    
+    background-color: #e07437;
+background-image: linear-gradient(62deg, #e99134 50%, orange 100%);
+
+    padding:1rem;
+    
+    border-right: 4px solid black;
+    @media (max-width:576px){
+        padding-top: 0;
+        border-right: unset;
+        border-bottom: 4px solid black;
+    }
+    &__addDivs{
+        &__inputs{
+            >div{
+                >label{
+                    margin-right: 0.3rem;
+                }
+                >input{
+                    margin-right: 0.3rem;
+                }
+                margin-bottom: 1rem;
+
+            }
+            >button{
+                background-color: purple;
+                color:#fff;
+                font-size: 1rem;padding:0.3rem 1rem;
+                border:0;
+                border-radius: 4px;
+            }
+        }
+    }
+  }
+
+  &__right{
+
+      flex:0.7;
+    background-color: rgb(58, 155, 177);
+    display:flex;
+    
+    flex-direction: column;
+  }
+  &__code{
+      background-color:#282B36;
+      min-height:220px;
+      max-height: 220px;
+      padding-top: 1rem;
+      position: relative;
+      @media (max-width:576px){
+        display:none;
+    }
+      >pre>code{
+          color:#fff;
+      }
+      &__copy{
+          cursor: pointer;
+          position:absolute;
+          right:2rem;
+          bottom:1rem;
+          background-color: rgb(62, 53, 100);
+          width:40px;
+          height:40px;
+          display:grid;
+          place-items: center;
+          border-radius: 50%;
+          &:hover{
+            transform: scale(1.03);
+          }
+      }
+  }
+
+  &__flexbox{
+    width:50vw;
+
+    height: 80vh;
+        height:100%;
+        margin:1rem auto;
+        max-height: 80vh;
+        overflow:hidden;
+        box-shadow: 0px 1px 1px #ddd, 0 1px 2px #ccc;
+        background: rgba(224, 230, 231, 0.25);
+        box-shadow: 0 8px 32px 0 rgba(250, 250, 252, 0.37);
+        backdrop-filter: blur( 4px );
+        -webkit-backdrop-filter: blur( 4px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+      border:1px solid rgb(228, 217, 217);
+      border-width: 3px 3px 5px 5px;
+      border-radius:1% 5% 1% 5%/5% 1% 6% 1%;
+
+      @media (max-width:576px){
+        width:90vw;
+        min-height: 393.7px;
+    }
+
+      &__div{
+        min-width: 200px;
+        max-width: 200px;
+        min-height: 200px;
+        max-height: 200px;
+        @media (max-width: 576px){
+            min-width: 120px;
+            max-width: 120px;
+            min-height: 120px;
+            max-height: 120px;
+        }
+        border:1px solid black;
+        border-width: 3px 4px 3px 5px;
+        border-radius:95% 4% 92% 5%/4% 95% 6% 95%;
+        transform: rotate(2deg);
+        transition:all 0.2s ease-in;
+        box-shadow: 0 4px  4px  rgba(0, 0, 0, .1),
+        0 1px  6px  rgba(0, 0, 0, .05),
+        0 8px  8px  rgba(0, 0, 0, .1), 
+        0 16px 16px rgba(0, 0, 0, .1), 
+        8px 32px 32px rgba(0, 0, 0, .15), 
+        8px 64px 64px rgba(0, 0, 0, .15);
+
+        &__delete:hover{
+            transform: scale(1.02);
+        }
+      }
+  }
+}
+
+.radio{
+    .ant-radio-button-wrapper{
+        margin-right: 5px;
+        margin-bottom: 3px;
+        background:rgb(255, 204, 0);
+        border: 1px solid black;
+        font-weight: bold;
+        border-radius: 8px;
+        font-size: 0.9rem !important;
+        box-shadow: 0 4px  4px  rgba(0, 0, 0, .1),
+        0 1px  6px  rgba(0, 0, 0, .05),
+        0 8px  8px  rgba(0, 0, 0, .1), 
+        0 5px 66px rgba(0, 0, 0, .1);
+        &:hover{
+            background: darken(red,10%);
+            color:white;
+        }
+
+    }
+    .ant-radio-button-wrapper:not(:first-child)::before{
+        background-color:transparent;
+    }
+    .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled){
+        background-color:green;
+        border-color: black;
+        &:hover{
+            background-color:darken(green,10%);
+        }
+    }
+}
+
+
+.container{
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+    }
